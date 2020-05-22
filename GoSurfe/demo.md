@@ -1,1 +1,1 @@
-<a href="https://sweetysweet.github.io/GoSurfe">Demo</a>
+Просмотреть демо: <a href="https://sweetysweet.github.io/GoSurfe">Demo</a>
