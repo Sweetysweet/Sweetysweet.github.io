@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+.label {
+    display: inline-block;
+    padding: 1px 15px;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: default;
+}
+.label-blue { background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); }
+.input-label {
+    margin-left: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-file {
+    cursor: pointer !important;
+}
+.file-input {
+    display: none;
+}
+
+
+.file-container {
+    flex-wrap: wrap;
+}
+.file-block {
+    margin-right: 20px;
+}
+
+.text-red { color: #ff4040; }
+
+.file-delete {
+    margin-left: 10px;
+    cursor: pointer;
+}
