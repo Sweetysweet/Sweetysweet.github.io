@@ -1,0 +1,36 @@
+//- pageTitle: Главная
+//- pageCategory: Страницы
+//- date: 12.12.2018
+//- status: wait
+
+extends ../layouts/layout.pug
+include ../components/footer/footer.pug
+
+include ../components/hero/hero.pug
+include ../components/partners/partners.pug
+include ../components/product/product.pug
+include ../components/news/news.pug
+include ../components/recomend/recomend.pug
+include ../components/seo/seo.pug
+include ../components/clients/clients.pug
+include ../components/contacts/contacts.pug
+
+
+
+
+append vars
+  -
+    setDefs({
+      pageTitle: 'Главная',
+      menuActiveIndex: 0
+    })
+
+block content
+  +hero()
+  +partners()
+  +product()
+  +news()
+  +recomend()
+  +seo()
+  +clients()
+  +contacts()

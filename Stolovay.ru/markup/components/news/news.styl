@@ -1,0 +1,95 @@
+mixinNews()
+  .news
+    margin-bottom 90px
+    .wrapper-container
+      .news-title
+        margin-bottom 50px
+        @media $tablet
+          text-align center
+        span
+          font-size 40px
+      .news-content
+        display flex
+        @media $tablet
+          width 817px
+          flex-direction column
+          span, a, p 
+            font-size 20px
+        &__left
+          max-width 490px
+          width 100%
+          @media $tablet
+            margin-left 138px
+          &-item
+            margin-bottom 70px
+            &_content_sub
+              display flex
+              width 90%
+              justify-content space-between
+              margin-top 28px
+              padding-bottom 17px
+              &_name
+                color $lime
+              &_data
+                color #a6a5a5
+            &_content_title
+              .title
+                font-size 24px
+                @media $tablet
+                  font-size 30px
+            &_content_text
+              p
+                font-size 16px
+                margin-top 31px 
+                @media $tablet
+                  font-size 20px 
+                  text-align justify   
+        &__right
+          margin-left 105px
+          @media $tablet
+            margin-left 66px
+          &-item
+            display -webkit-box
+            margin-bottom 22px
+            &_content
+              margin-left 20px
+              &_sub
+                display flex
+                width 90%
+                justify-content space-between
+                padding-bottom 17px
+                &_name
+                  color $lime
+                &_data
+                  color #a6a5a5  
+              &_title
+                max-width 523px
+                margin-bottom 30px
+              &_description
+                font-size 16px
+                width 528px
+                @media $tablet
+                  width 485px
+                  text-align justify     
+      .news-button
+        @media $tablet
+          margin-top 30px
+          text-align center
+          width 817px
+        .button
+          display inline-block
+          padding 0 30px
+          line-height 34px
+          color #282828
+          border 2px solid #282828
+          -webkit-border-radius 15px
+          border-radius 20px
+          text-align center
+          transition .2s
+          &:hover
+            background-color $lime
+            color $white
+                
+
+
+mixinNews()
