@@ -1,0 +1,93 @@
+mixinSeo()
+  .seo
+    margin-bottom 30px
+    @media $tablet
+      margin-bottom 152px
+    &-content_left
+      width 75%
+      padding-right 250px
+      @media $tablet
+        width 100%
+        padding-right 0
+      p
+        @media $tablet
+          font-size 30px
+          text-align justify  
+      span
+       font-size 40px
+       display block
+       margin-bottom 35px
+       width 90%
+       ~ span 
+         padding-top 50px
+         padding-bottom 25px
+       + p 
+         font-size 18px
+         @media $tablet
+           font-size 30px
+           text-align justify 
+       @media $tablet
+         font-size 50px
+         width 100%  
+      .show-more 
+        width 45px
+        height 45px
+        background #383838
+        -webkit-border-radius 100%
+        border-radius 100%
+        color #fff
+        line-height 44px
+        text-align center
+        cursor pointer
+        font-size 16px
+        font-weight 100
+        margin-top 45px
+        @media $tablet 
+          width 100px
+          height 100px
+          font-size 50px
+    &-content_right 
+      width 25%
+      @media $tablet
+        margin-top 150px
+      &_logo_title
+        margin-top 20px
+        font-size 40px
+        @media $tablet
+          font-size 50px
+      &_logo_text
+        font-size 16px
+        color #777
+        @media $tablet
+          width 427px
+          font-size 25px
+
+      &_company
+        margin 44px 0 34px 0
+        &_title
+          margin-bottom 15px
+          @media $tablet
+            font-size 40px
+            width 320px
+        &_text
+          font-size 18px
+          color #777
+          @media $tablet
+            font-size 30px 
+
+      &_info
+        @media $tablet
+          width 400px
+        span 
+          display block
+          font-size 18px
+          @media $tablet
+            font-size 30px      
+    &-content
+      display flex
+      @media $tablet
+        flex-direction column
+        margin-left 30px
+        margin-right -18px
+ 
+mixinSeo()

@@ -1,0 +1,75 @@
+mixin hero(data={})
+  -
+    const {
+      list = ['Кафе, барам, ресторанам',
+       'Детским садам и школам',
+       'Таблет-питание',
+       'Для столовых',
+       'Для пищеблоков',
+       'Государственным заказчикам',
+       'Для магазинов',
+       'Для войсковых частей',
+       'Все предложения'
+       ],
+       imgPath = '%=static=%img/content/'
+    }= data;
+  section.hero
+    .wrapper
+      .content__wrapper
+        .hero-aside
+          .hero-main-block__title 
+            span Целевые предложения
+          a.hero-main-block__title_mob 
+            span Оборудование
+          .hero-main-block__menu
+            ul
+              each item in list
+                li
+                  a(href='#')=item
+        .hero-slider
+          .slider-container
+            .swiper-container.swiper-container-horizontal.slider-container__portfolio
+              .swiper-wrapper
+                .swiper-slide
+                  .swiper-slide__description
+                    .swiper-slide__description_toptext 
+                      p Портфолио
+                    .swiper-slide__description_title НИИ скорой помощи им.Н.В. Склифосовского
+                    .swiper-slide__description_subtext Оборудование для пищеблоков
+                    .swiper-slide__description_button 
+                      button(type="button").btn-slide__description_text Подробнее
+                  .swiper-slide__image
+                    picture
+                      img(src=`${imgPath}slider-img.png`, alt="sliderimage")
+                .swiper-slide
+                  .swiper-slide__description
+                    .swiper-slide__description_toptext 
+                      p Портфолио
+                    .swiper-slide__description_title  НИИ скорой помощи им.Н.В. Склифосовского
+                    .swiper-slide__description_subtext Оборудование для пищеблоков
+                    .swiper-slide__description_button 
+                      button(type="button").btn-slide__description_text Подробнее
+                  .swiper-slide__image
+                    picture
+                      img(src=`${imgPath}slider-img.png`, alt="sliderimage")
+                .swiper-slide
+                  .swiper-slide__description
+                    .swiper-slide__description_toptext 
+                      p Портфолио
+                    .swiper-slide__description_title  НИИ скорой помощи им.Н.В. Склифосовского
+                    .swiper-slide__description_subtext Оборудование для пищеблоков
+                    .swiper-slide__description_button 
+                      button(type="button").btn-slide__description_text Подробнее
+                  .swiper-slide__image
+                    picture
+                      img(src=`${imgPath}slider-img.png`, alt="sliderimage")
+              .swiper-pagination
+        .hero-banner
+          .hero-banner__description
+            .hero-banner__description_img
+              picture
+                img(src=`${imgPath}hero-banner.png`, alt="salebanner")
+            .hero-banner__description_title Самые низкие цены
+            .hero-banner__description_subtitle Распродажа
+            a(href='#').hero-banner__description_catalog Каталог распродаж
+          

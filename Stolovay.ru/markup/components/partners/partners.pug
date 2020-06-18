@@ -1,0 +1,28 @@
+mixin partners(data={})
+  -
+    const {
+        imgpath='%=static=%img/content/'
+    }= data;
+  section.partners 
+    .wrapper
+      .content__wrapper
+        ul.partners-partner__content
+          li
+            a(href='#')
+              img(src=`${imgpath}partner-1.png`, alt="")
+          li
+            a(href='#')
+              img(src=`${imgpath}partner-2.png`, alt="")
+        ul.partners-partner__content
+          li
+            a(href='#')
+              img(src=`${imgpath}partner-3.png`, alt="")
+          li
+            a(href='#')
+              img(src=`${imgpath}partner-4.png`, alt="")
+        ul.partners-partner__content
+          li
+            a(href='#')
+              img(src=`${imgpath}partner-5.png`, alt="")
+          li.last
+            a(href="") Все бренды    

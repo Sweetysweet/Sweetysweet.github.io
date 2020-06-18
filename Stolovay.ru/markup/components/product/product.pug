@@ -1,0 +1,101 @@
+mixin product(data={})
+  -
+    const {
+      imgPath = '%=static=%img/content/',
+      //- min = '(min-width: 768px)'
+      max = '(max-width: 1023px)'
+    }= data
+  section.product
+    .wrapper
+      .content__wrapper
+        .product__content
+          .product__content_description 
+            .product__content_description_title
+              a(href="#") Cпециальные предложения 
+            .product__content_wrapper_carts
+              .cart-wrapper
+                a(href='#').cart
+                  .product__content_cart
+                    .product__content_carts_img
+                      picture
+                        source(srcset=`${imgPath}mob/prod-mob.png`, media = max)
+                        img(src=`${imgPath}cart-prod-1.png`, alt="пароконвектомат")
+                    .product__content_carts_description
+                        .product__content_carts_description_flag
+                          picture
+                            source(srcset=`${imgPath}mob/flag.png`, media = max)
+                            img(src=`${imgPath}flag.png`, alt="country-flag")
+                        .product__content_carts_description_content Пароконвектомат ПКН-6
+                        .product__content_carts_description_price 160 000 руб.
+                        .product__content_carts_description_logo 
+                          picture
+                            source(srcset=`${imgPath}mob/partner-1.png`, media = max)
+                            img(src=`${imgPath}partner-1.png`, alt="пароконвектомат")
+              .cart-wrapper
+                a(href='#').cart
+                  .product__content_cart
+                    .product__content_carts_img
+                      picture
+                        source(srcset=`${imgPath}mob/prod-mob.png`, media = max)
+                        img(src=`${imgPath}cart-prod-1.png`, alt="пароконвектомат")
+                    .product__content_carts_description
+                        .product__content_carts_description_flag
+                          picture
+                            source(srcset=`${imgPath}mob/flag.png`, media = max)
+                            img(src=`${imgPath}flag.png`, alt="country-flag")
+                        .product__content_carts_description_content Пароконвектомат ПКН-6
+                        .product__content_carts_description_price 160 000 руб.
+                        .product__content_carts_description_logo 
+                          picture
+                            source(srcset=`${imgPath}mob/partner-1.png`, media = max)
+                            img(src=`${imgPath}partner-1.png`, alt="пароконвектомат")
+              .cart-wrapper            
+                a(href='#').cart
+                  .product__content_cart
+                    .product__content_carts_img
+                      picture
+                        source(srcset=`${imgPath}mob/prod-mob.png`, media = max)
+                        img(src=`${imgPath}cart-prod-1.png`, alt="пароконвектомат")
+                    .product__content_carts_description
+                        .product__content_carts_description_flag
+                          picture
+                            source(srcset=`${imgPath}mob/flag.png`, media = max)
+                            img(src=`${imgPath}flag.png`, alt="country-flag")
+                        .product__content_carts_description_content Пароконвектомат ПКН-6
+                        .product__content_carts_description_price 160 000 руб.
+                        .product__content_carts_description_logo 
+                          picture
+                            source(srcset=`${imgPath}/mob/partner-1.png`, media = max)
+                            img(src=`${imgPath}partner-1.png`, alt="пароконвектомат")
+            
+
+          .product__content_slider
+            .slider-container
+              .swiper-container.swiper-container-horizontal.slider-container__service
+                .swiper-wrapper
+                  .swiper-slide
+                    .swiper-slide__description
+                      .swiper-slide__description_toptext Сервис
+                      .swiper-slide__description_content Гарантийный ремон, монтажи и т.д.
+                      .swiper-slide__description_button 
+                        a(href="") Подробнее >
+                  .swiper-slide
+                    .swiper-slide__description
+                      .swiper-slide__description_toptext Сервис
+                      .swiper-slide__description_content Гарантийный ремон, монтажи и т.д.
+                      .swiper-slide__description_button 
+                        a(href="") Подробнее >
+                  .swiper-slide
+                    .swiper-slide__description
+                      .swiper-slide__description_toptext Сервис
+                      .swiper-slide__description_content Гарантийный ремон, монтажи и т.д.
+                      .swiper-slide__description_button 
+                        a(href="") Подробнее >
+                  .swiper-slide
+                    .swiper-slide__description
+                      .swiper-slide__description_toptext Сервис
+                      .swiper-slide__description_content Гарантийный ремон, монтажи и т.д.
+                      .swiper-slide__description_button 
+                        a(href="") Подробнее >
+                .swiper-pagination      
+            

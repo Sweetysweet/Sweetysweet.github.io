@@ -1,0 +1,163 @@
+mixinHero()
+  .hero
+    margin-top 20px
+    @media $tablet
+      margin-top 0
+    .hero-aside
+      width 341px
+      background-color $white
+      @media $tablet
+        width 100%
+      .hero-main-block__title
+        background-color #faad3d
+        color $white
+        padding 20px 0 20px 30px
+        margin 0
+        @media $tablet
+          display none
+        span 
+          font-size 24px
+      .hero-main-block__title_mob 
+        display none
+        @media $tablet
+          display block
+          margin-left 30px
+          margin-bottom 32px
+          span 
+            font-size 30px
+          &::after
+            content '>'
+            color #cecece
+            display inline-block
+            position absolute
+            top 0
+            right 30px
+            transition .2s
+            font-size 30px
+          &:hover::after
+            color #faad3d     
+      .hero-main-block__menu
+        @media $tablet
+          display none
+        ul
+          li
+            height 45px
+            line-height 45px
+            border-bottom solid 1px #ededed
+            position relative
+            a
+              display block
+              width 100%
+              padding-left 30px
+              color #000
+              transition .2s
+              font-weight $thin
+              font-size 18px
+              &:hover
+                color #faad3d
+              &::after
+                content '>'
+                color #cecece
+                display inline-block
+                position absolute
+                top 0
+                right 30px
+                transition .2s
+              &:hover::after
+                color #faad3d
+
+    .hero-slider
+      width 53%
+      margin 0 21px
+      @media $tablet
+        width 100%
+        margin 0
+      .slider-container
+        .slider-container__portfolio
+          .swiper-slide
+            background-color #282828
+            padding-bottom 3px
+            &__description
+              margin 60px 70px 68px
+              width 446px 
+              &_toptext p
+                font-weight 400
+                color #fff
+                margin-bottom 72px
+              &_title
+                color $white
+                margin-bottom 15px
+                font-size 39px
+              &_subtext
+                color $white
+                margin-bottom 67px
+              &_button
+                button
+                  outline none 
+                  padding 14px 21px
+                  background-color #faad3d
+                  border-radius 20px
+                  color $white
+                  letter-spacing 1px
+                  &:hover
+                    opacity .3
+                    transition .2s
+            &__image
+              position: absolute;
+              right: 0;
+              top: 71px;
+              width: 40%;
+          .swiper-pagination 
+            transition .2s
+            &-bullet 
+              cursor pointer 
+            &-bullet-active
+              background-color $white       
+
+    .hero-banner
+      border solid 2px #faad3d
+      background #fff
+      height 472px
+      padding 30px
+      position relative
+      width 340px
+      @media $tablet
+        width 757px
+        margin 30px
+      &__description
+        position relative
+        top 53%
+        @media $tablet
+          top 10%
+        &_title
+          margin-top 17px
+          @media $tablet
+            font-size 25px 
+        &_subtitle
+          font-size 40px
+          @media $tablet
+            font-size 50px
+        a
+          display block
+          width 100%
+          color #faad3d
+          transition .2s
+          font-weight $thin
+          font-size 16px
+          position relative
+          margin-top 9px
+          @media $tablet
+            font-size 30px
+          &::after
+            content '>'
+            color #faad3d
+            display inline-block
+            position absolute
+            top 0
+            right 82px
+            transition .2s
+            @media $tablet
+              right -9px 
+              position relative
+
+mixinHero()

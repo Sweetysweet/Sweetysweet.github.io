@@ -1,0 +1,385 @@
+mixinHeader()
+  header
+    transition .2s
+    width 1900px
+    @media $tablet
+      width 817px
+      height 100px
+
+    
+    .menu-wrapper
+      background-color $lime
+      .mobile-menu
+        position fixed
+        z-index 2
+        display none
+        align-items center
+        justify-content flex-start
+        padding 0 30px
+        top 0
+        background-color $white
+        left 0
+        right 0
+        height 50px
+        &__btn
+          position relative
+          display flex
+          align-items center
+          justify-content center
+          width 73px
+          height 73px
+          border-radius 50%
+          cursor pointer
+          transition .2s
+          background-color #fda11c
+          z-index 3
+        &__icon
+          display block
+          position relative
+          background-color $white
+          width 44%
+          height 3px
+          transition 2s
+          &::after,
+          &::before
+            content ''
+            display block
+            position absolute
+            width 100%
+            height 3px
+            transition .2s
+            z-index 3
+          &::after
+            top 8px  
+          &::before  
+            top -8px
+        &__container
+          position fixed
+          z-index 2
+          text-align center
+          display flex
+          align-items center
+          justify-content center
+          top 50px
+          left 0
+          right 0
+          height 0
+          opacity 1
+          transition .5s
+          transition-delay .2s
+          overflow hidden
+          background-color $white
+        &__list
+          transition .5s
+          transition-delay .5s
+          margin-top -50px
+          padding-left 0
+        &__item
+          font-size 26px
+          padding-bottom 15px
+        &__link
+          color #777
+          @media $tablet
+            font-size 35px
+        &__checkbox
+          display none
+          &:checked ~ 
+            .mobile-menu
+              &__nav
+                opacity 1
+                transition-delay 0s
+              &__container
+                height 100%
+                transition-delay 0s
+              &__btn
+                .mobile-menu__icon
+                  background-color transparent
+                  &::before,
+                  &::after
+                    top 0
+                  &::after
+                    transform rotate(-45deg)                
+                  &::before
+                    transform rotate(45deg)                
+        @media $tablet
+          display flex
+          height 100px
+      nav.nav-menu
+        font-size 16px
+        margin-left -31px
+        @media $tablet
+          display none
+        .nav-item
+          display flex
+          height 5rem
+          width 1200px
+          .nav-item__link
+            margin-top 21px
+            position relative
+            a
+              color #e9f5ec
+              margin-left 3rem
+              &:hover
+                color $white
+          .nav-item__link:nth-child(4n)::after
+            position absolute
+            content ''
+            height 2.8rem
+            width 0.1rem
+            background #67be7e
+            left 20px
+            top -0.6rem
+      .menu__contact
+        width 342px
+        margin-left 25px
+        display flex
+        justify-content space-between
+        margin-top 1.5rem
+        color $white
+        @media $tablet
+          display none
+        
+        &_mail
+          color #e9f5ec
+          &:hover
+            color $white
+          
+        &_phone
+          justify-content space-between
+          margin-left 40px
+          cursor pointer
+        .contact-popup
+          display none
+          color $black   
+          width 748px
+          height 364px
+          background white
+          position absolute
+          z-index 2
+          right 152px
+          margin-top 44px
+          &__close
+            position absolute
+            top 17px
+            right 18px
+            button 
+              font-size 30px
+              outline none 
+              border none
+              color #777777
+          &-wrapper
+            margin 0 60px 0 52px
+            display flex
+            justify-content space-around
+            position relative
+            top 67px
+            &__left
+              &_phone
+                margin-bottom 31px
+                &_tel
+                  color $lime
+                  font-size 24px
+                &_sub
+                  color #777
+                span 
+                  display block      
+              &_social
+                ul
+                  margin-top 22px
+                  li
+                    margin-top 8px 
+                    img 
+                      object-fit contain
+            &__right
+              margin-left 120px
+              &_callback
+                margin-bottom 31px
+                &_title
+                  font-size 24px           
+                &_sub
+                  color #777
+              form
+                input 
+                  border none 
+                  border-bottom 2px solid #c4c4c4
+                  margin-bottom 22px
+                  padding-left 10px
+                  outline none 
+                input:focus
+                  border-bottom 2px solid #ea9b28
+                  transition .2s
+                button
+                  outline none 
+                  padding 14px 21px
+                  background-color #faad3d
+                  border-radius 20px
+                  color $white
+                  letter-spacing 1px  
+              span 
+                display block   
+        img 
+          width 20px
+          height 16px
+          margin-right 8px
+          
+    .header-menu__middleware
+      background-color #e7e6e6
+      height 64px
+      width 100%
+      display flex
+      @media $tablet
+        display none
+      &_logo
+        margin-top 5px
+        width 225px
+        img 
+          width 40px
+          height 40px
+          margin-right 0.3rem
+        span
+          vertical-align 0.5rem
+          font-size 2.3rem
+      form.search-form
+        display flex
+        align-items center 
+        .header-menu__middleware_select
+          margin-left 90px
+          select 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            border: 0 !important;
+            background: #f1f1f1;
+            background-image: none;
+          
+          select::-ms-expand 
+            display none
+          
+          /* Custom Select */
+          .select 
+            position relative
+            display flex
+            width 16.5rem
+            height 3.6rem
+            line-height 3
+            background #f1f1f1
+            overflow hidden
+            border-radius .25em
+          
+            select 
+              flex 1
+              padding: 0 1rem
+              cursor pointer
+              color #777777
+          
+          /* Arrow */
+          .select::after 
+            content '\1F893'
+            position absolute
+            top 0
+            right 0
+            padding 0 0.8rem
+            font-size 2rem
+            background #f1f1f1
+            cursor pointer
+            pointer-events: none
+            transition .25s all ease
+          
+          .select:hover::after 
+            color #34a853
+          select option:checked 
+              color #34a853
+        .header-menu__middleware_search
+          .wrap-input
+            position relative
+            margin-left 1px
+            input 
+              border none
+              height 3.5rem
+              width 574px
+              outline none 
+              padding-left 9px
+            input:focus
+              border 1px solid $lime
+        .search-button
+          .btn
+            position relative
+            background-color #faad3d
+            width 54px
+            height 45px
+            border none
+            border-radius 0 7px 7px 0
+            outline none
+            transition .2s
+      .vendor-wrapper
+        display flex
+        justify-content space-between
+        &_vendor
+          margin-left 52px
+          width 13rem
+          margin-top 1rem
+          .middleware_vendor-text
+            margin -3rem 0 0 3.4rem
+            line-height 14px
+            span 
+              font-size 14px
+              font-weight $thin
+              color #777777
+        &_cart
+          display flex
+          margin-left 3rem
+          padding-left 2px
+          padding-right 19px
+          &:hover
+            background-color #faad3d
+            cursor pointer
+            transition .2s
+            span 
+              color $white
+          .cart-left
+            padding-top 0.5rem
+            margin-left 2.5rem
+            .cart-count
+              margin-left .8rem
+              color #ea8b00
+              font-size 1.3rem
+          .cart-right
+            margin-top .5rem
+            margin-left .8rem
+            .cart-right__sum
+              span 
+                font-weight $thin
+                color #777777         
+    .header-categories
+      background-color $white
+      height 100px
+      width 1900px
+      box-shadow 7px 7px 18px rgba(33, 37, 41, 0.12)
+      @media $tablet
+        display none
+      .slider-container
+        margin 9px 0 0 -38px
+        @media $tablet
+          display none
+        .slider-categories
+          width 1583px
+          .swiper-wrapper
+            justify-content: space-between
+            .swiper-slide
+              width auto
+              .categories-item
+                margin-left 34px
+                &__img
+                  text-align center
+                &__text
+                  font-size 14px
+                  &:hover
+                    color #272b31
+                    transition .2s
+    
+        
+      
+mixinHeader()

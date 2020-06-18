@@ -1,0 +1,43 @@
+mixin contacts(data={})
+
+  -
+    const {
+      firstList = ['Компания', 'Портфолио', 'Ресторанам', 'Застройщикам', 'Гос.заказчикам', 'Таблет-питание', 'Сервис', 'Новости', 'Контакты'],
+      secondList = ['Тепловое', 'Холодильное', 'Посудомоечное', 'Барное', 'Хлебопекарное', 'Линии раздачи', 'Нейтральное', 'Для фаст фуда', 'Для залов', 'Весовое'],
+      thirdList = ['Кафе, барам, ресторанам', 'Детским садам и школам', 'Таблет-питание', 'Для кондитерских', 'Для пиццерий', 'Для магазинов', 'Для воинских частей', 'Все предложения'],
+      fourthList = ['8 495 150-31-71', '8 800 500-43-44', 'звонок бесплатный', 'Пн-Пт', '09:00 до 18:00', 'com@stolovay.ru', 'info@stolovay.ru', '111524, Москва', 'Рязанский проспект 24к2']
+    }= data;
+  
+  section.contacts
+    .wrapper
+      .content
+        .contacts-grid
+          .contacts-grid__col
+            .contacts-col_title
+              span Информация
+              ul
+                each item in firstList
+                  li
+                    a(href="#")= item
+          .contacts-grid__col
+            .contacts-col_title
+              span Оборудование
+              ul
+                each item in secondList
+                  li
+                    a(href="#")= item
+          .contacts-grid__col
+            .contacts-col_title
+              span Предложения
+              ul
+                each item in thirdList
+                  li
+                    a(href="#")= item
+          .contacts-grid__col
+            .contacts-col_title
+              span Контакты
+              ul.fourthList
+                each item in fourthList
+                  li
+                    a(href="#")= item
+          
